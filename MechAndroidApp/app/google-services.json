@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "366292760606",
+    "project_id": "machfind-6ce35",
+    "storage_bucket": "machfind"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "ID",
+        "android_client_info": {
+          "package_name": "com.version1.test1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "KEY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -870,7 +870,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         private fun commitUserToFirebaseDatabase(activity: MainActivity, viewFlipper: ViewFlipper) {
-            val dbReference = FirebaseDatabase.getInstance("https://machfind-6ce35-default-rtdb.asia-southeast1.firebasedatabase.app")
+            val dbReference = FirebaseDatabase.getInstance("")
                 .getReference("RegisteredUsers")
 
             val userIdNode = dbReference.push().key ?: "user_${System.currentTimeMillis()}"
@@ -934,7 +934,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         private fun authenticateUserFromDatabase(activity: MainActivity, viewFlipper: ViewFlipper, userKey: String, passKey: String) {
-            val dbQuery = FirebaseDatabase.getInstance("https://machfind-6ce35-default-rtdb.asia-southeast1.firebasedatabase.app")
+            val dbQuery = FirebaseDatabase.getInstance("")
                 .getReference("RegisteredUsers")
 
             dbQuery.addListenerForSingleValueEvent(object : ValueEventListener {
@@ -1217,7 +1217,7 @@ class MainActivity : AppCompatActivity() {
                         locationUpdates["latitude"] = freshLocation.latitude
                         locationUpdates["longitude"] = freshLocation.longitude
 
-                        FirebaseDatabase.getInstance("https://machfind-6ce35-default-rtdb.asia-southeast1.firebasedatabase.app")
+                        FirebaseDatabase.getInstance("")
                             .getReference("RegisteredUsers")
                             .child(activeNodeKey)
                             .updateChildren(locationUpdates)
@@ -1265,7 +1265,7 @@ class MainActivity : AppCompatActivity() {
         ) {
             val originLat = userRegistrationProfile.latitude
             val originLon = userRegistrationProfile.longitude
-            val dbQuery = FirebaseDatabase.getInstance("https://machfind-6ce35-default-rtdb.asia-southeast1.firebasedatabase.app")
+            val dbQuery = FirebaseDatabase.getInstance("")
                 .getReference("RegisteredUsers")
 
             dbQuery.addListenerForSingleValueEvent(object : ValueEventListener {
@@ -1477,7 +1477,7 @@ class MainActivity : AppCompatActivity() {
             val container = bookingsView.findViewById<LinearLayout>(R.id.containerBookings)
             val tvEmpty = bookingsView.findViewById<TextView>(R.id.tvEmptyBookings)
             val myProviderId = SessionManager.getUserKey(activity)
-            val database = FirebaseDatabase.getInstance("https://machfind-6ce35-default-rtdb.asia-southeast1.firebasedatabase.app")
+            val database = FirebaseDatabase.getInstance("")
 
             loadMechanicBookings(activity, viewFlipper, container, tvEmpty, myProviderId, database)
         }
@@ -1699,7 +1699,7 @@ class MainActivity : AppCompatActivity() {
          * so the user is never left with zero options.
          */
         private fun findSuggestedMechanicFromDatabase(activity: MainActivity, viewFlipper: ViewFlipper, specialization: String) {
-            val dbQuery = FirebaseDatabase.getInstance("https://machfind-6ce35-default-rtdb.asia-southeast1.firebasedatabase.app")
+            val dbQuery = FirebaseDatabase.getInstance("")
                 .getReference("RegisteredUsers")
 
             val originLat = userRegistrationProfile.latitude
@@ -1787,7 +1787,7 @@ class MainActivity : AppCompatActivity() {
 
             val tvMechanicRating = mechanicProfileView.findViewById<TextView>(R.id.tvMechanicRating)
             if (tvMechanicRating != null) {
-                val ratingsRef = FirebaseDatabase.getInstance("https://machfind-6ce35-default-rtdb.asia-southeast1.firebasedatabase.app")
+                val ratingsRef = FirebaseDatabase.getInstance("")
                     .getReference("Ratings").child(targetNodeId)
                 ratingsRef.addListenerForSingleValueEvent(object : ValueEventListener {
                     override fun onDataChange(snapshot: DataSnapshot) {
@@ -1874,7 +1874,7 @@ class MainActivity : AppCompatActivity() {
                             bookingDto.status = "pending"
 
                             val tableName = if (targetType == "TowTruck") "TowTruckBookings" else "MechanicBookings"
-                            val dbReference = FirebaseDatabase.getInstance("https://machfind-6ce35-default-rtdb.asia-southeast1.firebasedatabase.app")
+                            val dbReference = FirebaseDatabase.getInstance("")
                                 .getReference(tableName)
 
                             val generatedBookingKey = dbReference.push().key ?: ""
@@ -1958,7 +1958,7 @@ class MainActivity : AppCompatActivity() {
                         bookingDto.bookingType = "TowTruck"
                         bookingDto.status = "pending"
 
-                        val dbReference = FirebaseDatabase.getInstance("https://machfind-6ce35-default-rtdb.asia-southeast1.firebasedatabase.app")
+                        val dbReference = FirebaseDatabase.getInstance("")
                             .getReference("TowTruckBookings")
 
                         val generatedBookingKey = dbReference.push().key ?: ""
@@ -2028,7 +2028,7 @@ class MainActivity : AppCompatActivity() {
                             // gateway (e.g. PayHere/Stripe hosted checkout) instead of collecting
                             // raw card data in-app at all.
 
-                            val dbReference = FirebaseDatabase.getInstance("https://machfind-6ce35-default-rtdb.asia-southeast1.firebasedatabase.app")
+                            val dbReference = FirebaseDatabase.getInstance("")
                                 .getReference("Payments")
 
                             val generatedPaymentKey = dbReference.push().key ?: ""
@@ -2100,7 +2100,7 @@ class MainActivity : AppCompatActivity() {
                 return
             }
 
-            val databaseTargetReference = FirebaseDatabase.getInstance("https://machfind-6ce35-default-rtdb.asia-southeast1.firebasedatabase.app")
+            val databaseTargetReference = FirebaseDatabase.getInstance("")
                 .getReference("RegisteredUsers")
                 .child(activeNodeKey)
 
@@ -2215,7 +2215,7 @@ class MainActivity : AppCompatActivity() {
             val container = myBookingsView.findViewById<LinearLayout>(R.id.containerMyBookings)
             val tvEmpty = myBookingsView.findViewById<TextView>(R.id.tvEmptyMyBookings)
             val myCustomerId = SessionManager.getUserKey(activity)
-            val database = FirebaseDatabase.getInstance("https://machfind-6ce35-default-rtdb.asia-southeast1.firebasedatabase.app")
+            val database = FirebaseDatabase.getInstance("")
 
             loadMyBookings(activity, viewFlipper, container, tvEmpty, myCustomerId, database)
         }
@@ -2452,7 +2452,7 @@ class MainActivity : AppCompatActivity() {
 
             val container = adminView.findViewById<LinearLayout>(R.id.containerAdminVerify)
             val tvEmpty = adminView.findViewById<TextView>(R.id.tvEmptyAdminVerify)
-            val database = FirebaseDatabase.getInstance("https://machfind-6ce35-default-rtdb.asia-southeast1.firebasedatabase.app")
+            val database = FirebaseDatabase.getInstance("")
 
             loadUnverifiedProviders(activity, container, tvEmpty, database)
         }
