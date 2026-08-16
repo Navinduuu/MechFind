@@ -19,7 +19,7 @@ public class FirebaseConfig {
             try (InputStream serviceAccount = new ClassPathResource("serviceAccountKey.json").getInputStream()) {
                 FirebaseOptions options = FirebaseOptions.builder()
                         .setCredentials(GoogleCredentials.fromStream(serviceAccount))
-                        .setDatabaseUrl("https://machfind-6ce35-default-rtdb.asia-southeast1.firebasedatabase.app")
+                        .setDatabaseUrl("")
                         .build();
                 return FirebaseApp.initializeApp(options);
             }
