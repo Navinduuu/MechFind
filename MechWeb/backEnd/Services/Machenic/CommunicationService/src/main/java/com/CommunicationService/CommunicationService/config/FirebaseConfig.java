@@ -24,7 +24,7 @@ public class FirebaseConfig {
 
                 FirebaseOptions options = FirebaseOptions.builder()
                         .setCredentials(GoogleCredentials.fromStream(serviceAccount))
-                        .setDatabaseUrl("https://machfind-6ce35-default-rtdb.asia-southeast1.firebasedatabase.app")
+                        .setDatabaseUrl()
                         .build();
 
                 FirebaseApp.initializeApp(options);
