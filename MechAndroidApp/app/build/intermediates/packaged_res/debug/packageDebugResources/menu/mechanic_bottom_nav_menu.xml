@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Addition 1: Home (Anchors to the Mechanic Dashboard) -->
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/home"
+        android:title="Home" />
+
+    <!-- Addition 2: Jobs (To track active/past work orders) -->
+    <item
+        android:id="@+id/nav_jobs"
+        android:icon="@drawable/menunew"
+        android:title="Jobs" />
+
+    <item
+        android:id="@+id/nav_chats"
+        android:icon="@drawable/chat"
+        android:title="Chats" />
+
+    <item
+        android:id="@+id/nav_subscription"
+        android:icon="@drawable/installment"
+        android:title="Subscription" />
+
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/user"
+        android:title="Profile" />
+
+</menu>

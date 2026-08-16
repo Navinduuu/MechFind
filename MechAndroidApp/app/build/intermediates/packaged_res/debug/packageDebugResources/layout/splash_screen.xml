@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFBF00">
+
+    <ImageView
+        android:id="@+id/logoImageView1"
+        android:layout_width="142dp"
+        android:layout_height="171dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="129dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="300dp"
+        android:layout_x="130dp"
+        android:layout_y="238dp"
+        android:contentDescription="App Logo"
+        android:src="@drawable/gemini_generated_image_bxaor1bxaor1bxao_removebg_preview"
+        tools:srcCompat="@drawable/gemini_generated_image_bxaor1bxaor1bxao_removebg_preview" />
+
+</RelativeLayout>
