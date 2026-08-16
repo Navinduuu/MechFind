@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Mecfind</string>
+    <string-array name="gender_array">
+        <item>Gender</item>
+        <item>Men</item>
+        <item>Women</item>
+    </string-array>
+
+    <string-array name="role_array">
+        <item>I am a Vehicle Owner</item>
+        <item>I am a Mechanic</item>
+        <item>I am a Tow Truck Operator</item>
+    </string-array>
+
+    <string-array name="specialization_array">
+        <item>Select your specialization</item>
+        <item>ABS &amp; Brake Mechanic</item>
+        <item>Air Conditioning Mechanic</item>
+        <item>Cooling System Mechanic</item>
+        <item>Drivetrain Mechanic</item>
+        <item>Auto Electrical Mechanic</item>
+        <item>Emissions System Mechanic</item>
+        <item>Engine Mechanic</item>
+        <item>Fuel System Mechanic</item>
+        <item>Transmission Mechanic</item>
+        <item>Wheel &amp; Tire Mechanic</item>
+    </string-array>
+
+    <string-array name="specialization_filter_array">
+        <item>All specializations</item>
+        <item>ABS &amp; Brake Mechanic</item>
+        <item>Air Conditioning Mechanic</item>
+        <item>Cooling System Mechanic</item>
+        <item>Drivetrain Mechanic</item>
+        <item>Auto Electrical Mechanic</item>
+        <item>Emissions System Mechanic</item>
+        <item>Engine Mechanic</item>
+        <item>Fuel System Mechanic</item>
+        <item>Transmission Mechanic</item>
+        <item>Wheel &amp; Tire Mechanic</item>
+    </string-array>
+
+    <string-array name="service_type_filter_array">
+        <item>All providers</item>
+        <item>Mechanics only</item>
+        <item>Tow trucks only</item>
+    </string-array>
+</resources>

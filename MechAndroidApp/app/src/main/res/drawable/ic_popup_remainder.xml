@@ -1,0 +1,9 @@
+<ImageButton android:id="@+id/btnNotifications"
+    android:layout_width="44dp"
+    android:layout_height="44dp"
+    android:layout_marginStart="12dp"
+    android:background="@drawable/bg_action_icon_box"
+    android:src="@android:drawable/ic_popup_reminder"
+    app:tint="#1A1A1A"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" />
